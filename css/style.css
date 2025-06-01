@@ -282,3 +282,32 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+header {
+  background-color: #f9f9f9;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #007acc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.logo-container h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff; /* Indigo Blue */
+}
