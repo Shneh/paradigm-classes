@@ -309,5 +309,65 @@ header {
   font-size: 1.8rem;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  color: #ffffff; /* Indigo Blue */
+  color: git commit -m "Updated header font to Poppins and changed Paradigm Classes color to indigo blue"
+#ffffff; /* Indigo Blue */
+}
+.top-nav {
+  background-color: #3b82f6;
+  padding: 1rem;
+  text-align: center;
+}
+
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 2rem;
+}
+
+.top-nav ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.top-nav ul li a:hover,
+.top-nav ul li a.active {
+  color: #dbeafe;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 0.2rem;
+}
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.calc-buttons button {
+  font-size: 1.2rem;
+  padding: 0.6rem;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.calc-buttons button:hover {
+  background-color: #2563eb;
 }
