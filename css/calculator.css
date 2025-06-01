@@ -85,3 +85,39 @@ button.equals:hover {
 button.equals:active {
   background: #003f7f;
 }
+.top-nav ul li a:hover,
+.top-nav ul li a.active {
+  color: #dbeafe;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 0.2rem;
+}
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.top-nav {
+  background-color: #3b82f6;
+  padding: 1rem;
+  text-align: center;
+}
+
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 2rem;
+}
+
+.top-nav ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
