@@ -14,9 +14,11 @@
             <div class="nav-wrapper">
 
                 <!-- Sidebar Toggle Button -->
+                 <!-- Sidebar Toggle Button -->
                 <button id="sidebar-toggle" class="sidebar-toggle">
                     &#9776;
                 </button>
+
                 <div class="logo">
                     <img src="images/logo.png" alt="Paradigm Classes Logo" class="logo-img" />
                     <div>
@@ -39,14 +41,22 @@
         </div>
     </nav>
     <!-- Sidebar -->
-    <div id="sidebar" class="sidebar">
-        <h3 class="sidebar-title">Quick Features</h3>
-        <ul class="sidebar-menu">
-            <li><a href="#">Study Notes</a></li>
-            <li><a href="#">Video Lectures</a></li>
-            <li><a href="#">Ask Doubt</a></li>
-        </ul>
+<div id="sidebar" class="sidebar">
+    <button id="close-sidebar" class="close-btn">×</button>
+    <h3 class="sidebar-title">Quick Features</h3>
+    <ul class="sidebar-menu">
+        <li><a href="#">Study Notes</a></li>
+        <li><a href="#">Ask a Doubt</a></li>
+        <li><a href="#">Downloads</a></li>
+    </ul>
+
+    <div class="dark-mode-toggle">
+        <label>
+            <input type="checkbox" id="dark-toggle">
+            Dark Mode
+        </label>
     </div>
+</div>
 
 
     <!-- Hero Section -->
@@ -570,81 +580,122 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common questions about our courses and teaching methodology.</p>
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Find answers to common questions about our courses and teaching methodology.</p>
+        </div>
+        
+        <div class="faq-container" id="faq-container">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the batch size for each course?</span>
+                    <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We maintain small batch sizes to ensure personalized attention to each student. This helps us identify and address individual strengths and weaknesses effectively.</p>
+                </div>
             </div>
-            
-            <div class="faq-container" id="faq-container">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is the batch size for each course?</span>
-                        <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We maintain small batch sizes to ensure personalized attention to each student. This helps us identify and address individual strengths and weaknesses effectively.</p>
-                    </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How are the classes conducted?</span>
+                    <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer offline classes at our center in Arcadia Grant, Uttarakhand. The classes follow a structured curriculum based on the RD Sharma methodology, ensuring comprehensive coverage of all topics.</p>
                 </div>
-                
-                <!-- FAQ Item 2 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How are the classes conducted?</span>
-                        <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We offer offline classes at our center in Arcadia Grant, Uttarakhand. The classes follow a structured curriculum based on the RD Sharma methodology, ensuring comprehensive coverage of all topics.</p>
-                    </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What study materials are provided?</span>
+                    <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Students receive comprehensive study materials including theory notes, practice problems, previous year papers, and regular test series. All materials are designed to align with the latest exam patterns and follow the RD Sharma approach.</p>
                 </div>
-                
-                <!-- FAQ Item 3 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What study materials are provided?</span>
-                        <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Students receive comprehensive study materials including theory notes, practice problems, previous year papers, and regular test series. All materials are designed to align with the latest exam patterns and follow the RD Sharma approach.</p>
-                    </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How are student performances tracked?</span>
+                    <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We conduct regular tests and assessments to track student progress. Detailed performance analysis is provided to both students and parents, highlighting strengths and areas that need improvement.</p>
                 </div>
-                
-                <!-- FAQ Item 4 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How are student performances tracked?</span>
-                        <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We conduct regular tests and assessments to track student progress. Detailed performance analysis is provided to both students and parents, highlighting strengths and areas that need improvement.</p>
-                    </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are there any scholarships available?</span>
+                    <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we offer merit-based scholarships to deserving students. Scholarships are awarded based on performance in our scholarship test or based on previous academic achievements.</p>
                 </div>
-                
-                <!-- FAQ Item 5 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Are there any scholarships available?</span>
-                        <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, we offer merit-based scholarships to deserving students. Scholarships are awarded based on performance in our scholarship test or based on previous academic achievements.</p>
-                    </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can I enroll?</span>
+                    <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Just fill out the demo form or call us directly. We’ll guide you through the process.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Which classes do you cover?</span>
+                    <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We teach Classes 9–12, and prepare for JEE, NEET, NDA, and CUET exams.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are offline classes available?</span>
+                    <svg class="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! All classes are conducted offline at our center.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -735,6 +786,15 @@
             </div>
         </div>
     </section>
+            <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/919627242349" class="floating-btn whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+        </a>
+
+        <!-- Floating Call Button -->
+        <a href="tel:9627242349" class="floating-btn call-btn" title="Call Now">
+            📞
+        </a>
 
     <!-- Footer -->
     <footer class="footer">
@@ -805,22 +865,16 @@
         });
         
         // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentNode;
-                const isActive = item.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(faqItem => {
-                    faqItem.classList.remove('active');
-                });
-                
-                // If the clicked item wasn't active, make it active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
+    // Sidebar and dark mode logic (keep as is)...
+
+    // FAQ Toggle Script
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.closest('.faq-item');
+            item.classList.toggle('active');
         });
+    });
+
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -853,13 +907,49 @@
         });
     </script>
     <script>
-    const sidebarToggle = document.getElementById("sidebar-toggle");
-    const sidebar = document.getElementById("sidebar");
+            const sidebarToggle = document.getElementById("sidebar-toggle");
+            const sidebar = document.getElementById("sidebar");
+            const closeSidebarBtn = document.getElementById("close-sidebar");
+            const darkToggle = document.getElementById("dark-toggle");
 
-    sidebarToggle.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-    });
-</script>
+            // Toggle sidebar open
+            sidebarToggle.addEventListener("click", () => {
+                sidebar.classList.add("open");
+            });
+
+            // Close with X button
+            closeSidebarBtn.addEventListener("click", () => {
+                sidebar.classList.remove("open");
+            });
+
+            // Click outside to close sidebar
+            document.addEventListener("click", (e) => {
+                if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+                    sidebar.classList.remove("open");
+                }
+            });
+
+            // Dark Mode: Set on load from localStorage
+            if (localStorage.getItem("dark-mode") === "enabled") {
+                document.body.classList.add("dark-mode");
+                darkToggle.checked = true;
+            }
+
+            // Dark Mode Toggle
+            darkToggle.addEventListener("change", () => {
+                if (darkToggle.checked) {
+                    document.body.classList.add("dark-mode");
+                    localStorage.setItem("dark-mode", "enabled");
+                } else {
+                    document.body.classList.remove("dark-mode");
+                    localStorage.setItem("dark-mode", "disabled");
+                }
+            });
+    </script>
+
+
+    </script>
+
 
 </body>
 </html>
