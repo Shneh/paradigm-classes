@@ -1161,14 +1161,6 @@ body.dark-mode .close-btn,
 body.dark-mode .dark-mode-toggle {
   color: #f9fafb;
 }
-.sidebar {
-  left: auto;
-  right: -250px;
-}
-
-.sidebar.open {
-  right: 0;
-}
 
 .floating-btn {
     position: fixed;
@@ -1327,7 +1319,7 @@ body.dark-mode .dark-mode-toggle {
     left: -260px;
     width: 240px;
     height: 100vh;
-    background: #1e3a8a;
+    background: #ffffff;
     color: white;
     z-index: 1000;
     padding: 1rem;
