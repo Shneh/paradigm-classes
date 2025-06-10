@@ -1,17 +1,27 @@
 // Sidebar toggle
-const sidebarToggle = document.getElementById("sidebar-toggle");
-const sidebar = document.getElementById("sidebar");
-const closeSidebarBtn = document.getElementById("close-sidebar");
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+  const sidebar = document.getElementById("sidebar");
+  const closeSidebarBtn = document.getElementById("close-sidebar");
 
-sidebarToggle.addEventListener("click", () => {
-  sidebar.classList.add("open");
-});
-closeSidebarBtn.addEventListener("click", () => {
-  sidebar.classList.remove("open");
-});
-document.addEventListener("click", (e) => {
-  if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
-    sidebar.classList.remove("open");
+  if (sidebarToggle && sidebar && closeSidebarBtn) {
+    // Open sidebar
+    sidebarToggle.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevents click from bubbling to document
+      sidebar.classList.add("open");
+    });
+
+    // Close sidebar
+    closeSidebarBtn.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+    });
+
+    // Click outside to close
+    document.addEventListener("click", (e) => {
+      if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+        sidebar.classList.remove("open");
+      }
+    });
   }
 });
 
