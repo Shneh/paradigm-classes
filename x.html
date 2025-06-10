@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Paradigm Classes</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.03);
+  }
+  .slider-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slider-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  max-height: 525px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+}
+  .slider-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slider-img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .slider-btn.prev { left: 10px; }
+  .slider-btn.next { right: 10px; }
+
+  .slider-dots {
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+
+  .slider-dots span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slider-dots .active {
+    background: #1e40af;
+  }
+</style>
+</head>
+<body>
+  <!-- Spacing after fixed navbar -->
+  <div style="margin-top: 80px;"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-wrapper">
+        <button id="sidebar-toggle" class="sidebar-toggle">&#9776;</button>
+        <div class="logo">
+          <img src="images/logo.png" alt="Paradigm Logo" class="logo-img" />
+          <div>
+            <div class="logo-primary">PARADIGM</div>
+            <div class="logo-secondary">CLASSES</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="index.html#home" class="nav-link">Home</a>
+          <a href="index.html#courses" class="nav-link">Courses</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a href="index.html#contact" class="btn btn-primary">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button id="close-sidebar" class="close-btn">&times;</button>
+    <h3 class="sidebar-title">Quick Features</h3>
+    <ul class="sidebar-menu">
+      <li><a href="#">Study Notes</a></li>
+      <li><a href="#">Ask a Doubt</a></li>
+      <li><a href="video-lectures.html">Video Lectures</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="#">Downloads</a></li>
+    </ul>
+    <div class="dark-mode-toggle">
+      <label>
+        <input type="checkbox" id="dark-toggle" /> Dark Mode
+      </label>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="faq" style="padding-top: 7rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Gallery</h2>
+        <p class="section-subtitle">A glimpse of moments from Paradigm Classes</p>
+      </div>
+      <div class="slider-wrapper">
+  <div class="slider-track" id="slider-track">
+    <img src="images/IMG_3026.HEIC" alt="Gallery Image 1" class="slider-img">
+    <img src="images/IMG_3030.HEIC" alt="Gallery Image 2" class="slider-img">
+    <img src="images/IMG_3033.HEIC" alt="Gallery Image 3" class="slider-img">
+    <img src="images/IMG_3036.HEIC" alt="Gallery Image 4" class="slider-img">
+    <img src="images/IMG_3039.HEIC" alt="Gallery Image 5" class="slider-img">
+    <img src="images/IMG_3042.HEIC" alt="Gallery Image 6" class="slider-img">
+    <img src="images/IMG_3048.HEIC" alt="Gallery Image 7" class="slider-img">
+  </div>
+  <button class="slider-btn prev" id="prevBtn">&#10094;</button>
+  <button class="slider-btn next" id="nextBtn">&#10095;</button>
+  <div class="slider-dots" id="slider-dots"></div>
+</div>
+</div>
+</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Paradigm Classes. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+<script>
+  const track = document.getElementById('slider-track');
+  const slides = track.querySelectorAll('.slider-img');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('slider-dots');
+  const wrapper = document.querySelector('.slider-wrapper');
+  let index = 0;
+  let interval;
+  let startX = 0;
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+    dot.addEventListener('click', () => {
+      index = i;
+      updateSlider();
+    });
+  });
+
+  const dots = dotsContainer.querySelectorAll('span');
+
+  function updateSlider() {
+    track.style.transform = `translateX(${-index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlider();
+  }
+
+  function startAutoSlide() {
+    interval = setInterval(nextSlide, 3000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(interval);
+  }
+
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+  wrapper.addEventListener('mouseenter', stopAutoSlide);
+  wrapper.addEventListener('mouseleave', startAutoSlide);
+
+  // Touch support
+  wrapper.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  wrapper.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextSlide();
+    else if (endX - startX > 50) prevSlide();
+  });
+
+  startAutoSlide();
+</script>
+</body>
+</html>

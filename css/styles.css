@@ -98,7 +98,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -208,7 +208,6 @@ body {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
     padding: 8rem 0 5rem;
-    margin-top: 80px; /* ✅ This line adds spacing below the navbar */
 }
 
 
@@ -1163,3 +1162,97 @@ body.dark-mode .btn-primary {
     right: 80px;
     background-color: #1e40af;
 }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.03);
+  }
+  .slider-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slider-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  max-height: 525px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+}
+  .slider-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slider-img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .slider-btn.prev { left: 10px; }
+  .slider-btn.next { right: 10px; }
+
+  .slider-dots {
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+
+  .slider-dots span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slider-dots .active {
+    background: #1e40af;
+  }
