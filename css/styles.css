@@ -1450,3 +1450,171 @@ body, p, .section-subtitle, .form-input, .form-select {
         font-size: 2.25rem;
     }
 }
+:root {
+  --clr-accent: #3A3A3C;
+  --clr-text: #1C1C1E;
+  --clr-subtext: #6E6E73;
+  --clr-bg: #F5F5F7;
+  --clr-card: #FFFFFF;
+  --clr-border: #D1D1D6;
+  --clr-hover: #E5E5EA;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+/* Hero */
+.hero {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--clr-text);
+}
+
+.hero-subtitle {
+  color: var(--clr-subtext);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--clr-accent);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-hover);
+  color: var(--clr-text);
+}
+
+/* Cards and sections */
+.course-card,
+.feature-card,
+.testimonial-card,
+.faq-item {
+  background-color: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--clr-accent);
+  color: white;
+}
+
+
+/* ==== 🔥 Premium Startup Theme (Framer/Linear Inspired) ==== */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+
+:root {
+  --clr-bg: #F9FAFB;
+  --clr-text: #1E1E20;
+  --clr-subtext: #9CA3AF;
+  --clr-primary: #0B0B0F;
+  --clr-accent: #3B82F6;
+  --clr-accent-2: #6366F1;
+  --clr-border: #E5E7EB;
+  --clr-card: #FFFFFF;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: var(--clr-bg);
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--clr-subtext);
+  max-width: 700px;
+  margin: 1rem auto 2rem;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background-color: var(--clr-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-accent-2);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-light {
+  background-color: white;
+  color: var(--clr-accent);
+  border: 1px solid var(--clr-border);
+}
+
+.btn-light:hover {
+  background-color: var(--clr-border);
+}
+
+/* CARDS */
+.course-card,
+.feature-card,
+.testimonial-card,
+.facility-card,
+.faq-item {
+  background-color: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* SECTION TITLES */
+.section-title,
+.course-title,
+.feature-title,
+.about-title,
+.stat-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle,
+.about-description,
+.testimonial-text,
+.contact-value {
+  color: var(--clr-subtext);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--clr-primary);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
