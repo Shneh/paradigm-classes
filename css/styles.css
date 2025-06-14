@@ -1394,3 +1394,59 @@ body.dark-mode .dark-mode-toggle {
     font-size: 0.85rem;
   }
 }
+
+
+/* ===== Apple-Like Enhancements ===== */
+
+/* Smooth section entrance animation */
+[data-aos] {
+    transition-property: transform, opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+}
+
+/* Hero Title Enhancement */
+.hero-title {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+    font-weight: 800;
+}
+
+/* Section Reveal Animations */
+.section-header, .section-title, .section-subtitle, .hero-text, .feature-card, .course-card, .facility-card {
+    will-change: transform, opacity;
+}
+
+/* Typography Improvements */
+body, p, .section-subtitle, .form-input, .form-select {
+    font-variation-settings: "wght" 400;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Button Elevation on Hover */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Apple-style glowing hover on CTA */
+.btn-primary:hover {
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.3);
+}
+
+/* Subtle parallax-like feel for hero background */
+.hero {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Responsive headline scaling */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.25rem;
+    }
+}
