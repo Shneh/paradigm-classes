@@ -109,3 +109,22 @@ const track = document.getElementById('slider-track');
   });
 
   startAutoSlide();
+  
+  document.querySelectorAll("form").forEach(form => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          alert("🎉 Thanks! Your demo class is booked. We’ll contact you soon.");
+          form.reset();
+        } else {
+          alert("❌ Oops! Something went wrong. Try again later.");
+        }
+      });
+    });
+  });

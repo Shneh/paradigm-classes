@@ -978,12 +978,12 @@ label {
 /* Form validation styles */
 .form-input:invalid,
 .form-select:invalid {
-    border-color: #ef4444;
+    border-color: #9a3c84;
 }
 
 .form-input:focus:invalid,
 .form-select:focus:invalid {
-    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    box-shadow: 0 0 0 3px rgba(239, 68, 173, 0.1);
 }
 
 /* Button hover effects */
@@ -1617,4 +1617,54 @@ body {
   color: white;
   padding: 3rem 1rem;
   text-align: center;
+}
+
+
+/* ==== ✨ Form UI Enhancements for Inputs, Selects, Buttons ==== */
+
+.form-input,
+.form-select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.25rem;
+  border: 1px solid var(--clr-border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: var(--clr-text);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.form-input:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: var(--clr-accent);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+/* Button Animations */
+.btn-primary {
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+/* Label Styling */
+.form-group label {
+  font-weight: 500;
+  color: var(--clr-text);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Group Spacing */
+.form-group {
+  margin-bottom: 1.75rem;
 }
